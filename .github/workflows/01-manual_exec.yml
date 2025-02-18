@@ -23,6 +23,9 @@ jobs:
           npx appium --allow-cors &  # Inicia o Appium em background
           sleep 10                   # Aguarda 10 segundos para o Appium iniciar  
 
+      - name: Instalando o driver UiAutomator2
+        run: npx appium driver install uiautomator2
+     
       - name: Testes E2E (end-to-end)
         run: npm run test:android
 
