@@ -18,6 +18,11 @@ jobs:
       - name: Instalando dependências
         run: yarn
 
+      - name: Iniciando Appium com --allow-cors
+        run: |
+          npx appium --allow-cors &  # Inicia o Appium em background
+          sleep 10                   # Aguarda 10 segundos para o Appium iniciar  
+
       - name: Testes E2E (end-to-end) com WebdriverIO
         run: yarn run test:android
 
