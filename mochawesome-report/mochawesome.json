@@ -1,0 +1,233 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 6,
+    "passes": 6,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-02-17T23:45:01.819Z",
+    "end": "2025-02-17T23:46:35.144Z",
+    "duration": 93325,
+    "testsRegistered": 6,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b3ff9527-7ed4-48a5-8363-e2eb044b66e1",
+      "title": "",
+      "fullFile": "C:\\workshop-appium\\test\\spec\\login_test.js",
+      "file": "\\test\\spec\\login_test.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+          "title": "Login",
+          "fullFile": "C:\\workshop-appium\\test\\spec\\login_test.js",
+          "file": "\\test\\spec\\login_test.js",
+          "beforeHooks": [
+            {
+              "title": "\"before each\" hook in \"Login\"",
+              "fullTitle": "Login \"before each\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 6382,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "driver = await init(process.env.PLATFORM)",
+              "err": {},
+              "uuid": "3cd98728-e150-42a5-af0d-7085f0543f00",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after each\" hook in \"Login\"",
+              "fullTitle": "Login \"after each\" hook in \"Login\"",
+              "timedOut": false,
+              "duration": 583,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await end(driver)",
+              "err": {},
+              "uuid": "4fd00ec2-c6a3-407f-86e7-2ddb057208c0",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "Login com email inválido",
+              "fullTitle": "Login Login com email inválido",
+              "timedOut": false,
+              "duration": 9560,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"error@teste.com\")\nawait preencherSenha(driver, \"123456\")\nawait clickEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "2c1de741-58cb-40e0-9b83-97590582093e",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email e senha vazios",
+              "fullTitle": "Login Login com email e senha vazios",
+              "timedOut": false,
+              "duration": 6348,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await clickEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "97615c43-011c-4087-9c4f-c2a303a70703",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com email vazio",
+              "fullTitle": "Login Login com email vazio",
+              "timedOut": false,
+              "duration": 8059,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherSenha(driver, \"123456\")\nawait clickEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "0a9e7f3d-0166-4038-a15d-0eb92161dd5c",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha vazio",
+              "fullTitle": "Login Login com senha vazio",
+              "timedOut": false,
+              "duration": 8177,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"teste@teste.com\")\nawait clickEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "6f6889c7-6298-406a-ac2f-11b34a6b7d1c",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com senha inválida",
+              "fullTitle": "Login Login com senha inválida",
+              "timedOut": false,
+              "duration": 9656,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"teste@teste.com\")\nawait preencherSenha(driver, \"xpto\")\nawait clickEntrar(driver)\nawait validaLoginError(driver)",
+              "err": {},
+              "uuid": "2d901bee-ea40-4d07-9a47-4f8e3d6c5bf8",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Login com sucesso",
+              "fullTitle": "Login Login com sucesso",
+              "timedOut": false,
+              "duration": 9329,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "await preencherEmail(driver, \"teste@teste.com\")\nawait preencherSenha(driver, \"123456\")\nawait clickEntrar(driver)\nawait ValidarLoginSucesso(driver)",
+              "err": {},
+              "uuid": "28bbb6ab-d56b-47dd-a7e5-83f352e65aa7",
+              "parentUUID": "bfe574ca-2007-4a13-8270-1c87e2a3d3ac",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "2c1de741-58cb-40e0-9b83-97590582093e",
+            "97615c43-011c-4087-9c4f-c2a303a70703",
+            "0a9e7f3d-0166-4038-a15d-0eb92161dd5c",
+            "6f6889c7-6298-406a-ac2f-11b34a6b7d1c",
+            "2d901bee-ea40-4d07-9a47-4f8e3d6c5bf8",
+            "28bbb6ab-d56b-47dd-a7e5-83f352e65aa7"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 51129,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 50000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 50000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "11.1.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
