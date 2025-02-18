@@ -26,12 +26,6 @@ jobs:
           npx appium --allow-cors &  # Inicia o Appium em background
           sleep 10                   # Aguarda 10 segundos para o Appium iniciar  
 
-      - name: Criar AVD
-        run: |
-          echo "y" | sdkmanager --install "system-images;android-30;google_apis;x86"
-          echo "no" | avdmanager create avd -n Pixel_API_30 -k "system-images;android-30;google_apis;x86"
-
-
       - name: Iniciando o emulador Android
         run: |
           echo "Iniciando o emulador"
