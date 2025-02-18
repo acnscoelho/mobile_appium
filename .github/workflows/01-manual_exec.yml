@@ -23,7 +23,7 @@ jobs:
           npx appium --allow-cors &  # Inicia o Appium em background
           sleep 10                   # Aguarda 10 segundos para o Appium iniciar  
 
-      - name: Testes E2E (end-to-end) com WebdriverIO
+      - name: Testes E2E (end-to-end)
         run: npm run test:android
 
       - uses: actions/upload-artifact@v4
