@@ -25,7 +25,25 @@ jobs:
         run: |
           npx appium --allow-cors &  # Inicia o Appium em background
           sleep 10                   # Aguarda 10 segundos para o Appium iniciar  
-     
+
+      - name: Criar AVD
+        run: |
+          echo "y" | sdkmanager --install "system-images;android-30;google_apis;x86"
+          echo "no" | avdmanager create avd -n Pixel_API_30 -k "system-images;android-30;google_apis;x86"
+
+
+      - name: Iniciando o emulador Android
+        run: |
+          echo "Iniciando o emulador"
+          $ANDROID_HOME/emulator/emulator -avd Pixel_API_30 -no-audio -no-window &
+          adb wait-for-device
+          adb devices
+
+      - name: Aguardando o emulador ficar pronto
+        run: |
+          echo "Aguardando dispositivo"
+          timeout 300 bash -c 'until adb shell getprop sys.boot_completed | grep -m 1 "1"; do sleep 1; done'
+        
       - name: Testes E2E (end-to-end)
         run: npm run test:android
 
