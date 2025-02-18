@@ -18,6 +18,9 @@ jobs:
       - name: Instalando dependências
         run: yarn
 
+      - name: Instalando WebdriverIO
+        run: yarn webdriverIO install
+
       - name: Iniciando Appium com --allow-cors
         run: |
           npx appium --allow-cors &  # Inicia o Appium em background
