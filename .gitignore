@@ -1,2 +1,4 @@
 login_tests.js
 node_modules/
+.github/workflows
+01-manual-exec.yml

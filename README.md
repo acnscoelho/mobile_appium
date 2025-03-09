@@ -10,7 +10,7 @@
 6. Configurar apontamento Appium
 7. Criar cenário startando appium
 8. Instalar mocha (npm install mocha)
-9. Instalar chai (npme i chai)
+9. Instalar chai (npm i chai)
 10. Instalar mochawesome (npm i mochawesome)
 
 ---
