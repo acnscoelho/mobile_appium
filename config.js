@@ -4,7 +4,7 @@ import { remote } from "webdriverio"
 const androidCapabilities = {
     'appium:platformName': 'Android',
     'appium:automationName': 'UiAutomator2', 
-    'appium:deviceName': 'R9XT601SQ3W',
+    'appium:deviceName': 'XXXXXXXXXXX',
     'appium:app': 'C:/workshop-appium/apps/app-release.apk',
     'appium:appPackage': 'com.qazandoqafood',
     'appium:appActivity': '.MainActivity'
