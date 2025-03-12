@@ -25,7 +25,7 @@ export async function init(platform) {
         port: 4723,
         capabilities: platform == 'android' ? androidCapabilities : iOSCapabilities
     })
-        .catch(err => console.log('Erro ao inicia o Appim: ', err))
+        .catch(err => console.log('Erro ao iniciar o Appium: ', err))
 }
 
 export async function end(driver) {
