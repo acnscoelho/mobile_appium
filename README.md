@@ -1,4 +1,4 @@
-# Mobile Appium
+# Mobile Appium (Workshop do QAzando na Pós de Automação de Testes de Software)
 
 ## Requisitos
 
